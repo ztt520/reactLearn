@@ -29,6 +29,6 @@
     "babel-plugin-import": "^1.0.1",
     "less": "^3.8.1",
     "less-loader": "^4.1.0",
-    "webpack": "^3.0.0"
+    "webpack": "^3.12.0"
   }
 }
