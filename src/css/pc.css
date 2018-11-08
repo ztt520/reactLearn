@@ -25,3 +25,20 @@
   margin-left: 5px;
   margin-right: 5px;
  }
+ .ant-menu-horizontal>.ant-menu-item>a, .ant-menu-horizontal>.ant-menu-submenu>a {
+  display: inline-block !important;
+}
+
+.container{
+padding-top: 10px;
+}
+
+.leftContainer {
+  width: 400px;
+  float: left;
+}
+
+.carousel {
+  width: 400px;
+  float: left;
+}
