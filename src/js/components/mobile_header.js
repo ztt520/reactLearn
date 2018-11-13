@@ -20,10 +20,10 @@ class MobileHeader extends React.Component {
       userid: 0
     }
   };
-  componentWillMount(){
-    if(localStorage.userid){
-      this.setState({hasLogined:true});
-      this.setState({userNickName:localStorage.userNickName,userid:localStorage.userid})
+  componentWillMount() {
+    if (localStorage.userid) {
+      this.setState({ hasLogined: true });
+      this.setState({ userNickName: localStorage.userNickName, userid: localStorage.userid })
     }
   };
   // 显示模态框
@@ -73,20 +73,20 @@ class MobileHeader extends React.Component {
       this.setState({ action: "register" });
     }
   };
-  login(){
-		this.setModalVisible(true);
-	};
-  logout(){
-    localStorage.userid ="";
+  login() {
+    this.setModalVisible(true);
+  };
+  logout() {
+    localStorage.userid = "";
     localStorage.userNickName = "";
-    this.setState({hasLogined:false});
- };
+    this.setState({ hasLogined: false });
+  };
   render() {
     let { getFieldProps } = this.props.form;
     const userShow = this.state.hasLogined ?
-      // <Link>
-        <Icon type="inbox"  onClick={this.logout.bind(this)}/>
-      // </Link>
+      <Link to={`/usercenter`}>
+        <Icon type="inbox" />
+      </Link>
       :
       <Icon type="setting" onClick={this.login.bind(this)} />
     return (
